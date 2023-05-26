@@ -1,0 +1,178 @@
+/*********************************************************************
+                                MAIN
+********************************************************************/
+.details-of-menus,
+.deserts,
+.cocktails {
+    text-align: center;
+}
+
+.details-of-menus button {
+    padding: 0.7rem 1.5rem;
+
+    font-weight: 900;
+
+    cursor: pointer;
+    border: 0;
+    background-color: var(--clr-third);
+    color: var(--clr-five);
+    transition: all 1s;
+}
+
+.details-of-menus button:hover,
+.details-of-menus button:focus {
+    background-color: var(--clr-second);
+    color: var(--clr-four);
+}
+
+/******************************************************
+    Survol des images du menu pour afficher le prix
+ ******************************************************/
+.menu .survol:hover .prix-meat {
+    opacity: 0.9;
+    transform: scale(1.1);
+
+}
+
+.menu .survol {
+    position: relative;
+}
+
+.menu .meat-prix img {
+    vertical-align: middle;
+}
+
+
+.menu .prix-meat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    border: 0.2rem solid var(--clr-four);
+    opacity: 0;
+    background-color: var(--clr-six);
+    transition: all 1s;
+}
+
+.menu .prix {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding: 1em 0;
+    margin: 1rem;
+
+    font-size: 1rem;
+
+    color: var(--clr-four);
+    border: 0.2rem solid var(--clr-four);
+}
+
+.menu .prix img {
+    display: block;
+    max-width: 20%;
+    margin-inline: auto;
+}
+
+.menu .prix strong {
+    display: block;
+    
+    margin-inline: au<to;
+    
+    font-size: 1.5rem;
+
+}
+
+.img-menus,
+.img-deserts,
+.img-cocktails {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 2rem;
+    margin: 2rem;
+
+    background-color: var(--clr-third);
+}
+
+.img-menus .item,
+.img-deserts .item,
+.img-cocktails .item {
+    flex-basis: calc(50% - 1rem);
+}
+
+/************************************************************************************
+                                        TABLETTE
+*************************************************************************************/
+
+@media (min-width: 48.8125rem) and (max-width: 61.3125rem) {
+
+    /*******************************************
+                        MAIN
+    ********************************************/
+    .img-menus .item,
+    .img-deserts .item,
+    .img-cocktails .item {
+        flex-basis: calc((100%/3) - 1rem);
+    }
+
+    .menu .prix {
+        padding: .4rem 0;
+    }
+
+    .menu .prix img {
+        max-width: 23%;
+        margin: 0.1em auto;
+    }
+
+    .menu .prix {
+        font-size: 1rem;
+    }
+
+    .menu .prix strong {
+        font-size: 1.5rem;
+    }
+
+
+}
+
+
+/************************************************************************************
+                                         DESKTOP
+*************************************************************************************/
+@media (min-width: 61.3125rem) {
+
+    /*******************************************
+                        MAIN
+    ********************************************/
+    .img-menus .item,
+    .img-deserts .item,
+    .img-cocktails .item {
+        flex-basis: calc((100%/3) - 1rem);
+    }
+
+    .menu .prix img {
+        max-width: 28%;
+        margin: 0.5em auto;
+    }
+
+    .menu .prix {
+        font-size: 1.5rem;
+    }
+
+    .menu .prix strong {
+        margin: 0.5em auto;
+
+        font-size: 1.7rem;
+    }
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Brève description -->
+    <meta name="description" content="FRESHLY RESTAURANT: Venez voir nos différents mets">
+
+    <!-- Mot clé -->
+    <meta name="keyword" content="freshly,meat,fish,vegetarian">
+
+    <!--Lien de la favicon de freshly restaurant -->
+    <link rel="icon" href="../instructions/ressources/images/favicon.png" type="image/png">
+
+    <!-- CSS personnalisé -->
+    <link rel="stylesheet" href="../corrigé/css/freshly.css">
+
+    <title>FRESHLY RESTAURANT</title>
+</head>
+
+<body>
+    <!-- Début header -->
+    <header class="header">
+        <!-- logo et titre -->
+        <a href="#">
+            <img src="../instructions/ressources/images/logo.png" alt="Logo de la FRESHLY RESTAURANT">
+            <span>FRESHLY RESTAURANT</span>
+        </a>
+
+        <!-- Navbar -->
+        <nav>
+            <ul>
+                <li><a href="./home.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./menu.html">Menus</a></li>
+                <li><a href="./contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Fin header -->
+    <div class="container">
+
+        <!-- Début main -->
+        <main>
+            <section class="contact-us">
+                <h1>Contact us</h1>
+                <p>If your want to make a reservation, please complete this form.</p>
+                <p>Fields with * are required.</p>
+                <div class="formulaire">
+                    <form action="#" method="post">
+                        <fieldset class="reservation">
+                            <legend>Reservation</legend>
+                            <div class="champ">
+                                <label for="dat">Date</label>
+                                <input type="date" id="dat">
+                            </div>
+                            <div class="champ">
+                                <label for="tim">Time</label>
+                                <input type="time" id="tim">
+                            </div>
+                            <div class="champ">
+                                <label for="numb-guest">Number of guests</label>
+                                <input type="number" id="numb-guest">
+                            </div>
+                        </fieldset>
+                        <fieldset class="identite">
+                            <legend>Details</legend>
+                            <div class="champ">
+                                <label for="name">Name</label>
+                                <input type="text" id="name">
+                            </div>
+                            <div class="champ">
+                                <label for="mail">Email</label>
+                                <input type="email" id="mail">
+                            </div>
+                            <div class="champ">
+                                <label for="tele">Telephone</label>
+                                <input type="tel" id="tele">
+                            </div>
+                        </fieldset>
+                        <fieldset class="note">
+                            <legend>Further request</legend>
+                            <textarea  id="text" cols="30" rows="10"></textarea>
+                        </fieldset>
+                        <input type="submit" value="Reserve">
+                    </form>
+                </div>
+            </section>
+            <section class="location">
+                <h2>Our location</h2>
+            </section>
+
+        </main>
+        <!-- Fin main -->
+    </div>
+
+    <!-- Début footer -->
+    <footer>
+
+        <!-- Début div-hours-address-réseaux -->
+        <div class="hours-address">
+
+            <!-- Début section-hours -->
+            <section class="opening-hours">
+                <h3>Opening hours</h3>
+                <p>Monday : Closed</p>
+                <p>Tue-Wed : 9am - 10pm</p>
+                <p>Thu-Fri : 9am - 10pm</p>
+                <p>Sat-sun : 5pm - 10pm</p>
+            </section>
+            <!-- Fin section-hours -->
+
+            <!-- Début section-address -->
+            <section class="contact">
+                <h3>Contact</h3>
+                <address>
+                    <p>13 Christopher Street <br>
+                        New York, <br>
+                        NY 10014-3543</p>
+                    <a href="tel:+012000800999">+01 2000 800 999</a>
+                </address>
+            </section>
+            <!-- Fin section-address -->
+
+            <!-- Début section-réseaux -->
+            <section class="social-networks">
+                <h3>Social networks</h3>
+                <a href="#" class="fa-brands fa-facebook-f"></a>
+                <a href="#" class="fa-brands  fa-instagram"></a>
+                <a href="#" class="fa-brands  fa-pinterest"></a>
+            </section>
+            <!-- Fin section-réseaux -->
+        </div>
+        <!-- Fin div-hours-address-réseaux -->
+
+        <!-- Début div-copyright -->
+        <div class="copyright">
+            <a rel="license" href="#">
+                <img src="../../logo-3wa.png"
+                    alt="logo de la 3W Academy">
+            </a>
+            <p>
+                Cet exercice de <a href="#">3W Academy</a> est mis à disposition <a href="#">pour l'usage personnel des
+                    étudiants. Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification -
+                    International</a>.
+                Les autorisations au-delà du champ de cette license peuvent être obtenues auprès de <a
+                    href="#">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a
+                    href="mailto:catherine@yahoo.fr">Catherine Denos</a>.
+            </p>
+        </div>
+        <!-- Fin div-copyright -->
+
+    </footer>
+    <!-- Fin footer -->
+
+    <!-- SCRIPT -->
+
+    <!-- Importation Font Awesome  -->
+    <script src="https://kit.fontawesome.com/c6e02c7a37.js" crossorigin="anonymous"></script>
+
+    <!-- Importation script personnalisé-->
+    <script src="../corrigé/js/script.js"></script>
+
+</body>
+
+</html>

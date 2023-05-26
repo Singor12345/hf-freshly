@@ -1,0 +1,149 @@
+/**************************************************************************************
+                                           MAIN
+**************************************************************************************/
+.contact-us {
+    text-align: center;
+}
+
+.formulaire {
+    text-align: left;
+
+    background-color: var(--clr-third);
+}
+
+.formulaire form {
+    display: grid;
+    gap: 1rem;
+    padding: 2.5rem 6rem;
+}
+
+.formulaire .reservation,
+.formulaire .identite {
+    display: flex;
+    flex-flow: column;
+
+}
+
+.formulaire .note {
+    display: flex;
+    flex-flow: column;
+
+}
+
+.formulaire fieldset {
+    display: flex;
+    flex-flow: row;
+
+    border: 0;
+}
+
+.formulaire legend {
+    font-size: 2rem;
+}
+
+.formulaire .champ {
+    overflow: hidden;
+    
+    margin-bottom: 1rem;
+}
+
+.formulaire label {
+    width: 100%;
+}
+
+.champ input {
+    width: 97%;
+    height: 2rem;
+    padding: 0.4em;
+
+    border-radius: 0.3rem;
+    border: 0.0000001rem solid;
+
+}
+
+.formulaire .champ::before {
+    float: left;
+
+    flex-basis: 3%;
+    height: 1.2rem;
+    margin: 0 0.2rem 2rem;
+
+    content: "*";
+
+    border-bottom: 0.0625rem dotted #000;
+}
+
+[type=submit] {
+    width: 50%;
+    padding: 0.5em;
+    margin-inline: auto;
+
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: var(--clr-first);
+    color: var(--clr-four);
+}
+[type=submit]:hover {
+    background-color: var(--clr-second);
+    color: var(--clr-four);
+}
+
+/************************************************************************************
+                                        TABLETTE
+*************************************************************************************/
+
+@media (min-width: 48.8125rem) and (max-width: 61.3125rem) {
+
+    /*******************************************************************************
+                        MAIN
+    ********************************************************************************/
+    .img-menus .item,
+    .img-deserts .item,
+    .img-cocktails .item {
+        flex-basis: calc((100%/3) - 1rem);
+    }
+
+    .formulaire form {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 1rem;
+    }
+
+    .formulaire .note {
+        grid-column: 1 / -1;
+
+    }
+
+    [type=submit] {
+        grid-column: 1 / -1;
+    }
+}
+
+
+/************************************************************************************
+                                        DESKTOP
+*************************************************************************************/
+@media (min-width: 61.3125rem) {
+
+    /*******************************************************************************
+                        MAIN
+    ********************************************************************************/
+    .img-menus .item,
+    .img-deserts .item,
+    .img-cocktails .item {
+        flex-basis: calc((100%/3) - 1rem);
+    }
+
+    .formulaire form {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2.5rem 1rem;
+    }
+
+    .formulaire .note {
+        grid-column: 1 / -1;
+
+    }
+
+    [type=submit] {
+        grid-column: 1 / -1;
+    }
+}

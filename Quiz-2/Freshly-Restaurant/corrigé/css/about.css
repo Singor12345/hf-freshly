@@ -1,0 +1,63 @@
+/*********************************************************************
+                                MAIN
+********************************************************************/
+.about-us video {
+    display: block;
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+.img-dining {
+    display: grid;
+    gap: 1rem;
+    padding: 2rem;
+
+    text-align: center;
+
+    background-color: var(--clr-third);
+}
+
+.img-dining img {
+    transition: all 1s;
+    padding: 1rem;
+}
+
+.img-dining img:hover {
+    transform: scale(1.1);
+}
+
+.img-dining figcaption {
+    padding-bottom: 0.6rem;
+}
+
+/************************************************************************************
+                                        TABLETTE
+*************************************************************************************/
+
+@media (min-width: 48.8125rem) and (max-width: 61.3125rem) {
+    /*******************************************
+                        MAIN
+    ********************************************/
+
+    .img-dining {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/************************************************************************************
+                                        DESKTOP
+*************************************************************************************/
+@media (min-width: 61.3125rem) {
+
+    /*******************************************
+                        MAIN
+    ********************************************/
+    .img-dining {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}

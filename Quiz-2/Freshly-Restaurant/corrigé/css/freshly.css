@@ -1,0 +1,594 @@
+@import url("../css/normalise.css");
+@import url("../css/font-face.css");
+@import url("../css/about.css");
+@import url("../css/menu.css");
+@import url("../css/contact.css");
+
+
+/*******************************************
+                    GENERALE
+********************************************/
+
+/* Le corps de page */
+body {
+    font-family: "athiti";
+    font-size: 1.125rem;
+    line-height: 1.5;
+
+}
+
+
+
+/*******************************************
+                  TYPOGRAPHIE
+********************************************/
+
+h1,
+h2,
+h3,
+legend {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: "merienda";
+}
+
+h1,
+span {
+    font-size: 1.875rem;
+}
+
+h2 {
+    font-size: 1.5625rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+
+span::before,
+span::after,
+.container h1::before,
+.container h1::after,
+.container h2::before,
+.container h2::after,
+.container h3::before,
+.container h3::after,
+.special-menu li::before {
+    padding: 0.5rem;
+
+    font-family: "Font Awesome 5 free";
+    content: "\f005";
+    font-weight: 900;
+    font-size: 0.7rem;
+
+    color: var(--clr-second);
+}
+
+.prix strong {
+    font-size: 3.125rem;
+}
+
+.special-menu article li {
+    font-size: 0.9275rem;
+}
+
+.hours-address h3 {
+    font-size: 1.125rem;
+}
+
+footer a,
+footer p,
+.details-of-menus button,
+form [type=submit] {
+    font-size: 1rem;
+}
+
+
+/*******************************************
+                CLASSE UTILITAIRE
+********************************************/
+.container {
+    max-width: 1400px;
+    margin-inline: auto;
+}
+
+
+
+/*******************************************
+                    HEADER
+********************************************/
+header {
+
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    padding: 2rem 0;
+
+    text-align: center;
+
+    background-color: rgba(255, 255, 254, 0.066);
+    background-color: rgb(255, 255, 254);
+    box-shadow: 0 2.7rem 2.5rem rgba(235, 227, 219, 1) inset;
+}
+
+/********************** logo et titre ************************/
+header>a {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 2rem 0;
+
+    transition: all 1s;
+}
+
+/*********************** Survol du titre ou logo ************************/
+header>a:hover img,
+header>a:focus img {
+    transform: scale(1.4) translateY(-1rem) rotateY(360deg);
+
+}
+
+header>a img {
+    width: 7rem;
+
+    transition: all 1s;
+}
+
+header>a span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    /* flex-basis: 100%; */
+}
+
+/************************* Couleur des liens *************************/
+header a {
+    font-weight: 700;
+
+    color: var(--clr-five);
+}
+
+/************************* Navbar *************************/
+header ul {
+    border-bottom: 0.0625rem solid;
+    background-color: var(--clr-third);
+}
+
+header ul a {
+    display: block;
+    border-top: 0.0625rem solid;
+    padding: 0.5rem;
+
+    transition: all 1s;
+}
+
+header ul a:hover,
+header ul a:focus,
+.special-menu article a:hover,
+.special-menu article a:focus {
+    background-color: var(--clr-second);
+    color: var(--clr-third);
+}
+
+.active {
+    background-color: var(--clr-first);
+    color: var(--clr-third);
+}
+
+
+/*******************************************************************
+                                 MAIN
+********************************************************************/
+main {
+    padding: 0 1rem 1rem;
+}
+
+
+/************************* Css slick *************************/
+.slick-next {
+    right: 1.2rem !important;
+}
+
+.slick-next::before {
+    color: #f6eded !important;
+    font-size: 2rem !important;
+}
+
+.slick-prev {
+    left: 0.5rem !important;
+    z-index: 1;
+}
+
+.slick-prev::before {
+    color: #f6eded !important;
+    font-size: 2rem !important;
+}
+
+.slick-dots li button::before {
+    font-size: 1rem !important;
+}
+
+
+/************************ article-Welcom-to-Freshly ************************/
+.welcom-freshly {
+    margin: 7rem 0 3rem;
+}
+
+/************************* section-Special-menus *************************/
+.special-menu article {
+    padding: 0.5rem 0;
+    margin: 2rem 0;
+
+    background-color: var(--clr-third);
+}
+
+/******************************************************
+    Survol des images du menu pour afficher le prix
+ ******************************************************/
+.survol:hover .prix-meat {
+    opacity: 0.9;
+
+}
+
+.special-menu article .meat-prix {
+    position: relative;
+}
+
+.special-menu article .meat-prix img {
+    vertical-align: middle;
+}
+
+
+.prix-meat {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    opacity: 0;
+    background-color: var(--clr-six);
+    transition: all 1s;
+}
+
+.prix {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    margin: 2rem;
+
+    color: var(--clr-four);
+    border: 0.5rem solid var(--clr-four);
+}
+
+.prix strong {
+    display: block;
+
+    font-size: 3.125rem;
+}
+
+
+/****************************Liste du menu***************************/
+.special-menu article li {
+    padding: 1rem;
+
+    font-size: 0.9275rem;
+
+    border-bottom: 0.0625rem dashed;
+}
+
+/****************************See more du menu***************************/
+.special-menu article a {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 0.8rem 0 0;
+    margin: 1rem 5%;
+
+    font-size: 1.5rem;
+
+    background-color: var(--clr-first);
+    color: var(--clr-four);
+    transition: all 1s;
+}
+
+.special-menu article a::before {
+    display: inline-block;
+    width: 2.2rem;
+    margin: 0 0.5rem;
+
+    content: url("../../instructions/ressources/images/fork-knife.svg");
+}
+
+/*******************************************
+                    FOOTER
+********************************************/
+footer {
+    text-align: center;
+
+    color: var(--clr-four);
+}
+
+footer a {
+    color: var(--clr-four);
+}
+
+/******************************* div-hours-address-réseaux *******************************/
+.hours-address {
+    padding: 1.5rem;
+
+    background: url("../../instructions/ressources/images/footer-bg.jpg");
+}
+
+.hours-address h3 {
+    padding: 0.5em;
+
+    font-size: 1.125rem;
+
+    border-bottom: 0.0625rem dashed var(--clr-four);
+}
+
+.opening-hours p {
+    margin: 0;
+}
+
+.contact a{
+    display: block;
+    transition: all 1s;
+}
+.contact a:hover{
+    color: #f04e4e;
+    transform: scale(1.5);
+}
+
+/****************************Icon des réseaux********************************/
+.social-networks a {
+    padding: 0.5rem;
+    margin: 0 .4rem;
+
+    text-align: center;
+
+    border-radius: 0.5rem;
+}
+
+.social-networks a:hover,
+.social-networks a:focus {
+    background-color: var(--clr-second);
+    color: var(--clr-four);
+    transform: scale(1.4);
+}
+
+
+/*********************************** div-copyright ***********************************/
+.copyright {
+    background-color: var(--clr-first);
+    padding: 2rem;
+}
+
+/****************************Logo 3W Academy***************************/
+.copyright a img {
+    width: 3.5rem;
+}
+
+.copyright a {
+    text-decoration: underline;
+}
+
+/************************************************************************************
+                                        TABLETTE
+*************************************************************************************/
+
+@media (min-width: 48.8125rem) and (max-width: 71.3125rem) {
+
+    /***************************************************************************
+                                        HEADER 
+    ****************************************************************************/
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    /*************************** Survol du titre ou logo ***************************/
+    header>a:hover img,
+    header>a:focus img {
+        transform: scale(1.4) translateY(-1rem) rotateY(360deg);
+    }
+
+    /********************************* Navbar *********************************/
+    header ul {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        display: flex;
+        justify-content: space-around;
+
+        border-bottom: none;
+    }
+
+    header ul a {
+        padding: 0.5rem 1rem;
+
+        border-top: 0;
+    }
+
+
+    /****************************************************************************
+                                        MAIN
+    *****************************************************************************/
+
+    main {
+        padding: 0 1rem 1rem;
+    }
+
+    /********************************* Css slick *********************************/
+    .slick-next {
+        right: 1rem !important;
+    }
+
+    /************************ article-Welcom-to-Freshly ************************/
+
+    .welcom-freshly img {
+        display: block;
+        margin-inline: auto;
+    }
+
+    /****************************************************************************
+                                        FOOTER
+    *****************************************************************************/
+
+    /************************* div-hours-address-réseaux *************************/
+    .hours-address {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+        padding: 1.5rem;
+
+        background: url("../../instructions/ressources/images/footer-bg.jpg");
+    }
+
+    .opening-hours p {
+        margin: 0;
+    }
+
+    .social-networks a {
+        margin: 0 .5rem;
+    }
+
+
+    /************************* div-copyright *************************/
+    .copyright {
+        background-color: var(--clr-first);
+    }
+
+    .copyright a img {
+        width: 5.5rem;
+    }
+
+    .copyright a {
+        text-decoration: underline;
+    }
+}
+
+
+/************************************************************************************
+                                        DESKTOP
+*************************************************************************************/
+@media (min-width: 71.3125rem) {
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+
+        flex-flow: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 8.5rem;
+
+        background-image: linear-gradient(to top, #4c434324 0.1rem, white, white, white, white, white, white);
+    }
+
+    /********************** logo et titre ************************/
+    header>a img {
+        width: 5rem;
+    }
+
+    /******************************** logo et titre ********************************/
+    header>a {
+        flex-flow: row;
+        padding-left: 1rem;
+        flex-basis: calc(50%);
+
+    }
+
+    /*************************** Survol du titre ou logo ***************************/
+    header>a:hover img,
+    header>a:focus img {
+        transform: scale(1.4) translateX(-1rem) rotateY(360deg);
+
+    }
+
+    /************************************ Navbar ************************************/
+    header ul {
+        display: flex;
+        gap: 1.5rem;
+        flex-basis: calc(50%);
+
+        border-bottom: 0;
+        background-color: transparent;
+    }
+
+    header ul a {
+        padding: 0.7rem 1.5rem;
+
+        border-top: 0;
+        background-color: var(--clr-third);
+
+    }
+
+    /**************************************************************************
+                                        MAIN
+    ***************************************************************************/
+    main {
+        padding: 0 1rem 1rem;
+    }
+
+    /******************************** Css slick ********************************/
+    .slick-next {
+        right: 1.1rem !important;
+    }
+
+
+
+    /************************ article-Welcom-to-Freshly ************************/
+    .welcom-freshly {
+        overflow: auto;
+    }
+
+    .welcom-freshly img {
+        float: right;
+        margin-left: 0.5rem;
+        width: 45%;
+    }
+
+    /************************** section-Special-menus **************************/
+
+    .special-menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .special-menu h2 {
+        grid-column: 1 / -1;
+    }
+
+    /****************************************************************************
+                                        FOOTER
+    *****************************************************************************/
+    /************************ div-hours-address-réseaux ************************/
+    .hours-address {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5rem;
+        padding: 2rem;
+    }
+
+    /****************************** div-copyright ******************************/
+    .copyright a img {
+        width: 7.5rem;
+    }
+}
